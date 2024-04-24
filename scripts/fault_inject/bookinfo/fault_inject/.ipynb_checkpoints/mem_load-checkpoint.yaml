@@ -1,0 +1,19 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: mem
+  namespace: chaos-mesh
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - 'bookinfo'
+    labelSelectors:
+      'app': 'productpage'
+#    pods:
+#      hipster: # namespace of the target pods
+#        - cartservice-75d494679c-qdl5c
+  stressors:
+    memory:
+      workers: 1
+      size: '100%'
