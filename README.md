@@ -15,6 +15,8 @@ The versions of the components in the cluster are as follows:
 |Tcpdump | v4.9.2|
 |nacos| v2.2.1|
 
+##Architecture Graph
+![architecture](image/1.png)
 ## Quick Start
 
 ### ELK
