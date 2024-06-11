@@ -1,22 +1,19 @@
+# HybridCloud
 ## Description
 
-The benchmark of hybrid-deployed microservice systems in a cloud-edge collaborative environment.
+The project contains the configuration files of a benchmark of hybrid-deployed microservice systems in a cloud-edge collaborative environment.
 
-## Version Control
+The versions of the components in the cluster are as follows:
 
-Kubernetes v1.22.16
-
-Kuboard v3.3.0
-
-Istio v1.13.4
-
-Jaeger v1.52
-
-Elasticsearch/Kibana v8.11.3
-
-Tcpdump v4.9.2
-
-nacos v2.2.1
+| Component | Version | 
+|-------|-------|
+| Kubernetes | v1.22.16 |
+| Kuboard | v3.3.0 |
+|Istio |v1.13.4|
+|Jaeger |v1.52|
+|Elasticsearch | v8.11.3|
+|Tcpdump | v4.9.2|
+|nacos| v2.2.1|
 
 ## Quick Start
 
