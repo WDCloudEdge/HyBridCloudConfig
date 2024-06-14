@@ -45,7 +45,7 @@ helm upgrade --install yurt-hub -n kube-system --set kubernetesServerAddr=https:
 
 helm upgrade --install raven-agent -n kube-system openyurt/raven-agent
 ```
-It is also acceptable to choose your own deployment plan based on the [OpenYurt document](https://openyurt.io/docs/installation)
+It is also acceptable to choose your own deployment plan based on the [OpenYurt document](https://openyurt.io/docs/installation).
 ### 2. Deploy Monitor Tools
 
 ```bash
@@ -53,7 +53,7 @@ make monitor-deploy
 ```
 Note: 
 * If you want to use Istio, you can follow the [Istio document](https://istio.io/latest/docs/setup/install/).
-* If you want to use Locust, you can follow the [Locust document](https://docs.locust.io/en/stable/installation.html) or [Data Operation](#Data Operation).
+* If you want to use Locust, you can follow the [Locust document](https://docs.locust.io/en/stable/installation.html) or [Data Operation](#Data-Operation).
 ### 3. Deploy Microservice Systems
 ```bash
 make service-deploy
