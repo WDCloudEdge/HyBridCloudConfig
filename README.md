@@ -58,18 +58,23 @@ Note:
 ```bash
 make service-deploy
 ```
-
+Note:
+* If you want to use Nacos, you can follow the [Nacos document](https://nacos.io/docs/latest/quickstart/quick-start/).
+* If you want to use Minio, you can follow the [Minio document](https://min.io/docs/minio/kubernetes/upstream/index.html).
 ## Data Operation
-Using scripts to inject faults into the cluster:
-* [Fault inject scrips](https://github.com/WDCloudEdge/HybridCloudConfig/tree/master/scripts/fault_inject)
-datacollecction
-tcpdump
-load
+The data operation of this cluster consists of three parts, which you can see in detail in the following links:
+* [Fault injection](https://github.com/WDCloudEdge/Failure-injection.git)
+* [Load Generation](https://github.com/WDCloudEdge/load-generator.git)
+* [Data Collection](https://github.com/WDCloudEdge/data-collector.git)
 
-##  
-jaeger elk
-etcd
-nfs
+## Instruction 
+In order to ensure that clusters work better, we have made adjustments in the following three parts:
+### 1. ELK
+For better persistence, we chose to store the data collected by Jaeger in [Elasticsearch](https://www.elastic.co/cn/elasticsearch) and [Kibana](https://www.elastic.co/cn/kibana)
+### 2. Etcd Cluster
+The default etcd in Kubernetes has limited carrying capacity, and we chose to upgrade it to cluster mode: [Etcd Cluster](https://etcd.io/docs/v3.5/op-guide/clustering/)
+### 3. Nfs
+Across the cluster, we use nfs as the default presentation layer protocol.
 
 ## License
 This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/WDCloudEdge/HybridCloudConfig/LICENSE) file for details.

@@ -11,7 +11,3 @@ helm install chaos-mesh chaos-mesh/chaos-mesh --namespace=chaos-mesh
 
 ##Tcpdump
 sudo yum install tcpdump-4.9.2
-
-##Locust
-
-##dockerhub
