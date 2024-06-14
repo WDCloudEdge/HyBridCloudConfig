@@ -13,3 +13,6 @@ kubectl apply -f ./deploy/test-horsecoder
 
 ##train-ticket
 kubectl apply -f ./deploy/train-ticket/deploy.yaml
+
+##nacos
+##minio
