@@ -53,7 +53,7 @@ make monitor-deploy
 ```
 Note: 
 * If you want to use Istio, you can follow the [Istio document](https://istio.io/latest/docs/setup/install/).
-* If you want to use Locust, you can follow the [Locust document](https://docs.locust.io/en/stable/installation.html) or [Data Operation](#Data-Operation).
+* If you want to load test the microservice systems in the cluster, we recommend Locust as a load generation tool. You can follow the [Locust document](https://docs.locust.io/en/stable/installation.html) or [Data Operation](#Data-Operation) for further details.
 ### 3. Deploy Microservice Systems
 ```bash
 make service-deploy
@@ -63,9 +63,9 @@ Note:
 * If you want to use Minio, you can follow the [Minio document](https://min.io/docs/minio/kubernetes/upstream/index.html).
 ## Data Operation
 The data operation of this cluster consists of three parts, which you can see in detail in the following links:
-* [Fault injection](https://github.com/WDCloudEdge/Failure-injection.git)
-* [Load Generation](https://github.com/WDCloudEdge/load-generator.git)
-* [Data Collection](https://github.com/WDCloudEdge/data-collector.git)
+* [Fault injection](https://github.com/WDCloudEdge/Failure-injection.git) :By using choas-mesh, we simulated various types of failures in the cluster, including CPU, memory, network and container failures.
+* [Load Generation](https://github.com/WDCloudEdge/load-generator.git): In order to simulate access to microservice systems by different numbers of users, we used Locust to generate loads.
+* [Data Collection](https://github.com/WDCloudEdge/data-collector.git): With the help of monitoring tools, we collect metrics data on multiple dimensions for each microservice system.
 
 ## Instruction 
 In order to ensure that clusters work better, we have made adjustments in the following three parts:
@@ -77,4 +77,4 @@ The default etcd in Kubernetes has limited carrying capacity, and we chose to up
 Across the cluster, we use nfs as the default presentation layer protocol.
 
 ## License
-This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/WDCloudEdge/HybridCloudConfig/LICENSE) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/WDCloudEdge/HybridCloudConfig/LICENSE) file for details. Certain images in HybridCloud rely on the existing code from [Sock Shop](https://github.com/microservices-demo/microservices-demo.git) ,[Hipster](https://github.com/WDCloudEdge/Augmented-OnlineBoutique.git) ,[Train Tickets](https://github.com/WDCloudEdge/train-ticket.git). The credits go to the original authors
